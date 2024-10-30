@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mat-mdc-snack-bar-container.success-snackbar {
+  --mdc-snackbar-container-color: rgb(29, 226, 29);
+  --mat-mdc-snack-bar-container: red;
+  --mdc-snackbar-supporting-text-color: rgb(255, 255, 255);
+    margin-right: 35px;
+    padding-top: 50px;
+}
+
+.mat-mdc-snack-bar-container.error-snackbar {
+  --mdc-snackbar-container-color: rgb(255, 0, 0);
+  --mdc-snackbar-supporting-text-color: rgb(255, 255, 255);
+    margin-right: 35px;
+    padding-top: 50px;
+}
+

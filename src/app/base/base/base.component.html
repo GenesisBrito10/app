@@ -1,0 +1,125 @@
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-black neo-bold shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" routerLink="['/login']" routerLinkActive="router-link-active"><img src="" height="23" /></a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
+        <div class="navbar-nav align-items-lg-center">
+          <div class="d-none d-lg-block small text-light">
+            <a class="text-light me-3" routerLink="['/login']" routerLinkActive="router-link-active"><i class="fas fa-user"></i> Meus dados</a>
+
+            <a class="text-light"routerLink="['/login']" routerLinkActive="router-link-active" ><i class="fas fa-sign-out-alt me-1"></i>Sair</a>
+          </div>
+
+          <div class="d-lg-none">
+            <a class="nav-link text-light mt-2"routerLink="['/login']" routerLinkActive="router-link-active">
+              <i class="fas fa-user"></i>
+              Meus dados
+            </a>
+
+            <a class="nav-link text-light mt-2" routerLink="['/login']" routerLinkActive="router-link-active" ><i class="fas fa-sign-out-alt me-1"></i>Sair</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-12 col-md-3 mb-3">
+        <div class="col-12 bg-light shadow-sm rounded-custom-top p-3 mt-3" id="expand_sidebar">
+          <div class="d-flex justify-content-between align-items-center">
+            <h4 class="neo-bold mb-0">Dashboard</h4><i class="fas fa-bars d-md-none"></i>
+          </div>
+        </div>
+        <div class="d-none d-md-block" id="block_sidebar">
+          <div class="col-12 bg-light shadow-sm rounded p-3 mt-3">
+            <div class="d-flex align-items-center">
+              <div class="col-10">
+                <h5 id="customerName" class="neo-bold mb-0">Nome : {{ user.customer.name }}
+                </h5>
+
+                <small id="nextChargeDate" class="neo-regular">
+                  Vencimento: {{ user.customer.name }}
+
+                  <!-- <span *ngIf="days_until_next_charge > 0" style="color: red;">- Vencido há {{ days_until_next_charge }} dias</span>
+                  <span *ngIf="days_until_next_charge <= 0"><br /></span>
+ -->
+                  <a href="https://automabets.com.br/" class="mt-2 btn btn-sm btn-info rounded-custom">Renovar <i class="small fas fa-plus-circle"></i></a>
+                  <a href="https://automabets.com.br/" class="mt-2 btn btn-sm btn-whatsapp-rounded">Upgrade <i class="small fas fa-plus-circle"></i></a>
+                </small>
+              </div>
+              <div class="col-2">
+                <h2 class="text-center"><i class="fas fa-user"></i></h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 bg-light shadow-sm rounded p-3 mt-3">
+            <div class="d-flex align-items-center">
+              <div class="col-10">
+                <h5 class="neo-bold mb-0">Salas</h5>
+                <small class="neo-regular">Crie ou edite suas salas</small>
+              </div>
+              <div class="col-2">
+                <h2 class="text-center"><i class="fab fa-telegram"></i></h2>
+              </div>
+            </div>
+            <div>
+              <a routerLink="['/login']" routerLinkActive="router-link-active" class="mt-2 btn btn-sm btn-whatsapp-rounded">Ver salas</a>
+              <a routerLink="['/login']" routerLinkActive="router-link-active" class="mt-2 btn btn-sm btn-info rounded-custom">Adicionar <i class="small fas fa-plus-circle"></i></a>
+            </div>
+          </div>
+
+          <div class="col-12 bg-light shadow-sm rounded p-3 mt-3">
+            <div class="d-flex align-items-center">
+              <div class="col-10">
+                <h5 class="neo-bold mb-0">Primeiros passos</h5>
+                <small class="neo-regular">Como utilizar o software corretamete</small>
+              </div>
+              <div clas s="col-2">
+                <h2 class="text-center"><i class="fab fa-youtube"></i></h2>
+              </div>
+            </div>
+            <div>
+              <a routerLink="['/login']" routerLinkActive="router-link-active" class="mt-2 btn btn-sm btn-whatsapp-rounded">Acessar tutoriais</a>
+            </div>
+          </div>
+
+          <div class="col-12 bg-light shadow-sm rounded p-3 mt-3">
+            <div class="d-flex align-items-center">
+              <div class="col-10">
+                <h5 class="neo-bold mb-0">Automaçãoes</h5>
+                <small class="neo-regular">Automações para o telegram</small>
+              </div>
+              <div class="col-2">
+                <h2 class="text-center"><i class="fas fa-robot"></i></h2>
+              </div>
+            </div>
+            <div>
+              <a href="https://hotleadbot.com/" class="mt-2 btn btn-sm btn-whatsapp-rounded">Acessar</a>
+            </div>
+          </div>
+
+          <div class="col-12 bg-light shadow-sm rounded-custom-bottom p-3 mt-3">
+            <div class="d-flex align-items-center">
+              <div class="col-10">
+                <h5 class="neo-bold mb-0">Suporte</h5>
+                <small class="neo-regular">Fale com um atendente</small>
+              </div>
+              <div class="col-2">
+                <h2 class="text-center"><i class="fab fa-yelp"></i></h2>
+              </div>
+            </div>
+            <div>
+              <a class="mt-2 btn btn-sm btn-whatsapp-rounded" href="https://wa.link/ven3n3" target="_blank">Whatsapp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-9">
+       <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
